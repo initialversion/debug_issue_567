@@ -11,6 +11,10 @@ class Business < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :user,
+             :through => :ownership,
+             :source => :user
+
   # Validations
 
 end
