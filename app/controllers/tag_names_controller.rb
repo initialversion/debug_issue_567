@@ -1,6 +1,6 @@
 class TagNamesController < ApplicationController
   def index
-    @tag_names = TagName.all
+    @tag_names = TagName.page(params[:page]).per(10)
 
     render("tag_names/index.html.erb")
   end
