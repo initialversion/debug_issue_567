@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Tag_name resource:
+  # CREATE
+  get "/tag_names/new", :controller => "tag_names", :action => "new"
+  post "/create_tag_name", :controller => "tag_names", :action => "create"
+
+  # READ
+  get "/tag_names", :controller => "tag_names", :action => "index"
+  get "/tag_names/:id", :controller => "tag_names", :action => "show"
+
+  # UPDATE
+  get "/tag_names/:id/edit", :controller => "tag_names", :action => "edit"
+  post "/update_tag_name/:id", :controller => "tag_names", :action => "update"
+
+  # DELETE
+  get "/delete_tag_name/:id", :controller => "tag_names", :action => "destroy"
+  #------------------------------
+
   # Routes for the Ownership resource:
   # CREATE
   get "/ownerships/new", :controller => "ownerships", :action => "new"

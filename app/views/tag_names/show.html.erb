@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h3>Tag Name #<%= @tag_name.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Name</dt>
+      <dd><%= @tag_name.name %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/tag_names" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/tag_names/<%= @tag_name.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_tag_name/<%= @tag_name.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
