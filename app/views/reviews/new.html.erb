@@ -42,7 +42,7 @@
           Business
         </label>
 
-        <input type="text" id="business_id" name="business_id" placeholder="Business" class="form-control" value="<%= @review.business_id %>">
+        <%= select_tag(:business_id, options_from_collection_for_select(Business.all, :id, :address, @review.business_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for user_id -->
